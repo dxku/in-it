@@ -259,7 +259,7 @@
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
-        function getCookie(cname) {
+        function localStorage.getItem(cname) {
             let name = cname + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
             let ca = decodedCookie.split(';');
@@ -303,7 +303,7 @@
             span.textContent =
                 ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2);
 
-            if (getCookie("facebook-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
+            if (localStorage.getItem("facebook-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
                 $("#facebook-button").removeClass("disabled");
                 $("#facebook-setting").removeClass("disabled");
                 document.getElementById("facebook-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-unlock"></i>&nbsp;Desbloqueado</span>';
@@ -311,10 +311,10 @@
             } else if (localStorage.getItem("facebook-time") != null) {
                 $("#facebook-button").addClass("disabled");
                 $("#facebook-setting").addClass("disabled");
-                document.getElementById("facebook-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + getCookie("facebook-time") + '</span>';
+                document.getElementById("facebook-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + localStorage.getItem("facebook-time") + '</span>';
 
             }
-            if (getCookie("twitter-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
+            if (localStorage.getItem("twitter-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
                 $("#twitter-button").removeClass("disabled");
                 $("#twitter-setting").removeClass("disabled");
                 document.getElementById("twitter-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-unlock"></i>&nbsp;Desbloqueado</span>';
@@ -324,10 +324,10 @@
             } else if (localStorage.getItem("twitter-time") != null) {
                 $("#twitter-button").addClass("disabled");
                 $("#twitter-setting").addClass("disabled");
-                document.getElementById("twitter-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + getCookie("twitter-time") + '</span>';
+                document.getElementById("twitter-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + localStorage.getItem("twitter-time") + '</span>';
 
             }
-            if (getCookie("tiktok-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
+            if (localStorage.getItem("tiktok-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
                 $("#tiktok-button").removeClass("disabled");
                 $("#tiktok-setting").removeClass("disabled");
                 document.getElementById("tiktok-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-unlock"></i>&nbsp;Desbloqueado</span>';
@@ -337,10 +337,10 @@
             } else if (localStorage.getItem("tiktok-time") != null) {
                 $("#tiktok-button").addClass("disabled");
                 $("#tiktok-setting").addClass("disabled");
-                document.getElementById("tiktok-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + getCookie("tiktok-time") + '</span>';
+                document.getElementById("tiktok-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + localStorage.getItem("tiktok-time") + '</span>';
 
             }
-            if (getCookie("instagram-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
+            if (localStorage.getItem("instagram-time") == ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2).substr(-2)) {
                 $("#instagram-button").removeClass("disabled");
                 $("#instagram-setting").removeClass("disabled");
                 document.getElementById("instagram-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-unlock"></i>&nbsp;Desbloqueado</span>';
@@ -350,7 +350,7 @@
             } else if (localStorage.getItem("instagram-time") != null) {
                 $("#instagram-button").addClass("disabled");
                 $("#instagram-setting").addClass("disabled");
-                document.getElementById("instagram-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + getCookie("instagram-time") + '</span>';
+                document.getElementById("instagram-setting").innerHTML = '<span style="color: rgb(0,0,0);font-size: 12px;"><i class="fa fa-lock"></i>&nbsp;Bloqueado hasta las ' + localStorage.getItem("instagram-time") + '</span>';
 
             }
         }
